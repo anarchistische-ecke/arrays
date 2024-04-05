@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -11,24 +12,37 @@ public class Main {
         System.out.println(Arrays.toString(doubleArray));
         System.out.println(Arrays.toString(charArray));
         // Exercise 3
-        for (int index = 2; index >= 0; index--) {
-            System.out.print(newArray[index] + " ");
+        for (int index = newArray.length - 1; index >= 0; index--) {
+            if (index != 0) {
+                System.out.print(newArray[index] + ", ");
+            } else {
+                System.out.print(newArray[index]);
+            }
         }
         System.out.println();
-        for (int index = 2; index >= 0; index--) {
-            System.out.print(doubleArray[index] + " ");
+        for (int index = doubleArray.length - 1; index >= 0; index--) {
+            if (index != 0) {
+                System.out.print(doubleArray[index] + ", ");
+            } else {
+                System.out.print(doubleArray[index]);
+            }
         }
         System.out.println();
-        for (int index = 2; index >= 0; index--) {
-            System.out.print(charArray[index] + " ");
+        for (int index = charArray.length - 1; index >= 0; index--) {
+            if (index != 0) {
+                System.out.print(charArray[index] + ", ");
+            } else {
+                System.out.print(charArray[index]);
+            }
         }
         System.out.println();
+
         // Exercise 4
         for (int i = 0; i < newArray.length; i++) {
             if (newArray[i] % 2 != 0) {
                 newArray[i] = newArray[i] + 1;
             }
-            System.out.print(newArray[i] + " ");
         }
+        System.out.print(Arrays.toString(newArray));
     }
 }
